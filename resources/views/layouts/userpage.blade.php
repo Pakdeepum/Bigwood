@@ -9,38 +9,63 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="/style_user.css">
     <script src="https://kit.fontawesome.com/c63fd74e85.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="/supermarketfont">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
 </head>
 
 <body>
     <div class="menu" id="navbar">
         <div class="navbar">
             <nav class="navbar navbar-expand-lg container">
-                <img src="bigwood_images/logo.png" alt="" class="logo-position" style="margin-right: 50px; border-radius: 100%; background-color: rgba(255, 255, 255, 0.8) ;">
+                <img src="/bigwood_images/logo.png" alt="" class="logo-position" style="border-radius: 100%; background-color: rgba(255, 255, 255, 0.8) ;">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon" style="top: auto; bottom: auto;"><i class="fas fa-bars" id="i-menu"></i></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown" style="width: 50%;border-radius: 25px; text-align: left;">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link navmenu" href="{{ url('') }}">หน้าแรก</a>
+                            @if(Session::get('language')=='eng')
+                                <a class="nav-link navmenu" href="{{ url('') }}">Home</a>
+                            @else
+                                <a class="nav-link navmenu" href="{{ url('') }}">หน้าแรก</a>
+                            @endif
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navmenu" href="{{ url('productandservice') }}">สินค้าและบริการ</a>
+                            @if(Session::get('language')=='eng')
+                                <a class="nav-link navmenu" href="{{ url('productandservice') }}">Products&Services</a>
+                            @else
+                                <a class="nav-link navmenu" href="{{ url('productandservice') }}">สินค้าและบริการ</a>
+                            @endif
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navmenu" href="{{ url('shipping') }}">บริการส่งออก</a>
+                            @if(Session::get('language')=='eng')
+                                <a class="nav-link navmenu" href="{{ url('shipping') }}">Shipping</a>
+                            @else
+                                <a class="nav-link navmenu" href="{{ url('shipping') }}">บริการส่งออก</a>
+                            @endif
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navmenu" href="{{ url('contact') }}">ช่องทางการติดต่อ</a>
+                            @if(Session::get('language')=='eng')
+                                <a class="nav-link navmenu" href="{{ url('contact') }}">Contact</a>
+                            @else
+                                <a class="nav-link navmenu" href="{{ url('contact') }}">ช่องทางการติดต่อ</a>
+                            @endif
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link navmenu" href="{{ url('askmore') }}">สอบถามเพิ่มเติม</a>
+                            @if(Session::get('language')=='eng')
+                                <a class="nav-link navmenu" href="{{ url('askmore') }}">Ask more</a>
+                            @else
+                                <a class="nav-link navmenu" href="{{ url('askmore') }}">สอบถามเพิ่มเติม</a>
+                            @endif
                         </li>
                     </ul>
                 </div>
+                <div class="nav-item justify-content-end">
+                    <a class="navmenu" href="{{ url('th') }}" style=""><span class="flag-icon flag-icon-th"></span> |</a>
+                    <a class="navmenu" href="{{ url('en') }}" style=""><span class="flag-icon flag-icon-us"></span></a>
+                </div>
             </nav>
-        </div>
+        </div> 
     </div>
 
     <div class="slideshow-container">

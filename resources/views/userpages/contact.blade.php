@@ -12,7 +12,11 @@
                     <div class="col-lg-6 left-col">
                         <div class="form-group">
                             <br><br>
-                            <h3 id="mainname" style="color: goldenrod;"> ช่องทางการติดต่อ </h3>
+                            @if(Session::get('language')=='eng')
+                                <h3 id="mainname" style="color: goldenrod;"> Contact us </h3>
+                            @else
+                                <h3 id="mainname" style="color: goldenrod;"> ช่องทางการติดต่อ </h3>
+                            @endif
                             <br>
                             <div style="display: flex;margin-bottom: 15px;">
                                 <i class="fa-2x fas fa-map-marked-alt" style="text-align: center;

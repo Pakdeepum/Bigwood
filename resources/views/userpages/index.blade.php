@@ -17,9 +17,18 @@
                         </div>
                             <div class="col-lg-8" id="index-content2">
                                 <br>
-                                <h5><b id="title_1" style="color: white;"> เกี่ยวกับเรา </b></h5>
+                                @if(Session::get('language')=='eng')
+                                    <h5><b id="title_1" style="color: white;"> Aboutus </b></h5>
+                                @else
+                                    <h5><b id="title_1" style="color: white;"> เกี่ยวกับเรา </b></h5>
+                                @endif
                                 <p id="text2" style="text-align: justify; color: white; font-size: 15px;">
-                                    {{$aboutus->textTH}}
+                                    @if(Session::get('language')=='eng')
+                                        {{$aboutus->textEN}}
+                                    @else
+                                        {{$aboutus->textTH}}
+                                    @endif
+                                    
                                 </p>
                             </div>
                     </div>
@@ -34,12 +43,24 @@
             <div class="col-lg-8">
                 <br>
                 <p id="text3" style="color: white; font-size: 15px; text-align: justify;"> 
-                    {{$content2->textTH}}
+                    @if(Session::get('language')=='eng')
+                        {{$content2->textEN}}
+                    @else
+                        {{$content2->textTH}}
+                    @endif
                     <br>
                     <br>
-                    <i class="fas fa-caret-right"></i>&emsp;{{$content3->textTH}}
+                    @if(Session::get('language')=='eng')
+                        <i class="fas fa-caret-right"></i>&emsp;{{$content3->textEN}}
+                    @else
+                        <i class="fas fa-caret-right"></i>&emsp;{{$content3->textTH}}
+                    @endif
                     <br>
-                    <i class="fas fa-caret-right"></i>&emsp;{{$content4->textTH}}
+                    @if(Session::get('language')=='eng')
+                        <i class="fas fa-caret-right"></i>&emsp;{{$content4->textEN}}
+                    @else
+                        <i class="fas fa-caret-right"></i>&emsp;{{$content4->textTH}}
+                    @endif
                 </p>
             </div>
                 <div class="col-lg-4">
@@ -55,7 +76,11 @@
     <br>
 
     <div class="container" id="index-content3">
-        <P style="text-align:left; color: white; font-size: 30px;"> ผลงานของเรา 
+        @if(Session::get('language')=='eng')
+            <P style="text-align:left; color: white; font-size: 30px;"> Our clients 
+        @else
+            <P style="text-align:left; color: white; font-size: 30px;"> ผลงานของเรา 
+        @endif
         </P>
             <div class="lineup">
                     <div class="col-lg-12 lineup">

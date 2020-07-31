@@ -30,6 +30,10 @@ Route::post('/massage_store', 'UserController_askmore@massage_store');
 
 Route::get('/shipping', 'UserController_index@index');
 
+/** lang */
+Route::get('/th', 'languageController@thai');
+Route::get('/en', 'languageController@eng');
+
 
 /** ---------------- Admin route ---------------- */
 
@@ -52,6 +56,7 @@ Route::get('/product_type_admin_destroy/{id}', 'AdminController_product_type@pro
 /** Nav */
 Route::get('/nav_admin', 'AdminController_nav@nav_admin');
 Route::post('/nav_admin_edit_footer', 'AdminController_nav@nav_admin_edit_footer');
+Route::post('/nav_admin_edit_ship', 'AdminController_nav@nav_admin_edit_ship');
 Route::post('/nav_admin_edit_slide/{id}', 'AdminController_nav@nav_admin_edit_slide');
 
 /** Home */

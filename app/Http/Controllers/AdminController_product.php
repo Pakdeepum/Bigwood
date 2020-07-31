@@ -34,7 +34,7 @@ class AdminController_product extends Controller
         $products = product::orderBy('product_type','desc')->get();
         $types = product_type::all();
 
-        return view('adminpages.product')->with('products', $products)->with('types',$types);;
+        return view('adminpages.product')->with('products', $products)->with('types',$types);
     }
 
     public function product_admin_edit(Request $request, $id)

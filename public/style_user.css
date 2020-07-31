@@ -17,7 +17,6 @@ p#content_product {
     object-fit: cover;
     margin-top: 20px;
     margin-bottom: 10px;
-    box-shadow: 2px 5px 16px 0px black, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 
 }
 
@@ -185,7 +184,7 @@ img#img-selector {
 }
 
 .navbar-nav {
-    padding-left: 20px;
+    padding-left: 0px;
 }
 
 .navmenu:hover {

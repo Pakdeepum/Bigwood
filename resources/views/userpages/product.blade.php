@@ -6,9 +6,18 @@
      <br>
 
     <div class="container">
-        <i class="fa-2x fas fa-caret-right" id="subproduct1" style="color: white;">{{$types->nameTH}}
+        <i class="fa-2x fas fa-caret-right" id="subproduct1" style="color: white;">
+            @if(Session::get('language')=='eng')
+                {{$types->nameEN}}
+            @else
+                {{$types->nameTH}}
+            @endif
         </i>
-        <p id="madeto" style="color: white; padding-left: 20px;">รับทำตามออเดอร์หากสนใจสามารถระบุสเป็คเพื่อรับใบเสนอราคา
+        @if(Session::get('language')=='eng')
+            <p id="madeto" style="color: white; padding-left: 20px;">Made to order, if interested, can specify the specification to receive a quotation.
+        @else
+            <p id="madeto" style="color: white; padding-left: 20px;">รับทำตามออเดอร์หากสนใจสามารถระบุสเป็คเพื่อรับใบเสนอราคา
+        @endif
         </p>
     </div>
     <br>
@@ -26,7 +35,11 @@
                                     @else
                                         <img src="/images/images.jpg" id="pic1_pd1" alt="">
                                     @endif
-                                    <a href="#" class="producttext" id="title_pd1">{{$product->nameTH}}</a>
+                                    @if(Session::get('language')=='eng')
+                                        <a href="#" class="producttext" id="title_pd1">{{$product->nameEN}}</a>
+                                    @else
+                                        <a href="#" class="producttext" id="title_pd1">{{$product->nameTH}}</a>
+                                    @endif
                                 </div>
                             </div>
                         @endforeach
@@ -35,10 +48,15 @@
                     @endif
                     <div class="col-sm-12 text-center">
                         <br>
-                            <button type="button" onclick="" class="button2 btn btn-primary col-lg-4" 
-                            style=" background-color: goldenrod; color: black; border-radius: 20px; max-width:200px;">
-                                ขอใบเสนอราคา
-                            </button>
+                            @if(Session::get('language')=='eng')
+                                <a class="button2 btn btn-primary col-lg-4" style=" background-color: goldenrod; color: black; border-radius: 20px; max-width:200px;" href="{{ url('askmore') }}">
+                                    Quatation request
+                                </a>
+                            @else
+                                <a class="button2 btn btn-primary col-lg-4" style=" background-color: goldenrod; color: black; border-radius: 20px; max-width:200px;" href="{{ url('askmore') }}">
+                                    ขอใบเสนอราคา
+                                </a>
+                            @endif
                     </div>
                 </div>
             </div>

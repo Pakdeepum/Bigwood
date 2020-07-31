@@ -204,23 +204,82 @@
                                         </div>
                                         <div class="form mt-2">
                                             <div class="row">
+                                                <div class="col-lg-12 float-right">
+                                                    <button type="submit" class="btn btn-success">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Shipping -->
+                            <div class="card">
+                                <div class="card-header bg-darkgreen">
+                                    <h3 class="card-title text-white">บริการขนส่ง</h3>
+                                </div>
+                                <form method="post" action="nav_admin_edit_ship" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="card-body">
+                                        @if ($message = Session::get('success_footer2'))
+                                            <div class="alert alert-success alert-block">
+                                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                                    <strong>{{ $message }}</strong>
+                                            </div>
+                                        @endif
+                                        <div class="form mt-2">
+                                            <div class="row">
                                                 <div class="col-lg-12 float-left">
-                                                    <label for="exampleInputPassword1 float-left">Shipping</label>
+                                                    <label for="exampleInputPassword1 float-left">เนื้อหาTH (1)</label>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-lg-12 float-left">
-                                                    <textarea maxlength="1000" class="form-control" name="ship1"
-                                                        id="ship1" cols="3" rows="3" placeholder="Shipping line1" 
-                                                        value={{$ship1->value}} required>{{$ship1->value}}</textarea>
+                                                    <textarea maxlength="1000" class="form-control" name="text1TH"
+                                                        id="text1TH" cols="30" rows="5" placeholder="Ship 1" 
+                                                        value={{$ship1->textTH}} required>{{$ship1->textTH}}</textarea>
                                                 </div>
                                             </div>
-                                            <br>
+                                        </div>
+                                        <div class="form mt-2">
                                             <div class="row">
                                                 <div class="col-lg-12 float-left">
-                                                    <textarea maxlength="1000" class="form-control" name="ship2"
-                                                        id="ship2" cols="3" rows="3" placeholder="Shipping line2" 
-                                                        value={{$ship2->value}} required>{{$ship2->value}}</textarea>
+                                                    <label for="exampleInputPassword1 float-left">เนื้อหาEN (1)</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 float-left">
+                                                    <textarea maxlength="1000" class="form-control" name="text1EN"
+                                                        id="text1EN" cols="30" rows="5" placeholder="Ship 2" 
+                                                        value={{$ship1->textEN}} required>{{$ship1->textEN}}</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form mt-2">
+                                            <div class="row">
+                                                <div class="col-lg-12 float-left">
+                                                    <label for="exampleInputPassword1 float-left">เนื้อหาTH (2)</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 float-left">
+                                                    <textarea maxlength="1000" class="form-control" name="text2TH"
+                                                        id="text2TH" cols="1" rows="5" placeholder="Contact link" 
+                                                        value={{$ship2->textTH}} required>{{$ship2->textTH}}</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form mt-2">
+                                            <div class="row">
+                                                <div class="col-lg-12 float-left">
+                                                    <label for="exampleInputPassword1 float-left">เนื้อหาEN (2)</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 float-left">
+                                                    <textarea maxlength="1000" class="form-control" name="text2EN"
+                                                        id="text2EN" cols="1" rows="5" placeholder="Contact link" 
+                                                        value={{$ship2->textEN}} required>{{$ship2->textEN}}</textarea>
                                                 </div>
                                             </div>
                                         </div>

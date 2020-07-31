@@ -10,6 +10,7 @@ use App\product_type;
 
 use App\slide_show;
 use App\footer;
+use App\shipping_detail;
 
 use DB;
 
@@ -41,11 +42,11 @@ class UserController_product_type extends Controller
         $where = array('id' => '6');
         $contact_link  = footer::where($where)->first();
 
-        $where = array('id' => '7');
-        $ship1  = footer::where($where)->first();
+        $where = array('id' => '1');
+        $ship1  = shipping_detail::where($where)->first();
 
-        $where = array('id' => '8');
-        $ship2  = footer::where($where)->first();
+        $where = array('id' => '2');
+        $ship2  = shipping_detail::where($where)->first();
 
         /** types */
         $types = product_type::orderBy('id','asc')->get();

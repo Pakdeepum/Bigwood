@@ -234,31 +234,6 @@
                                         <div class="form mt-2">
                                             <div class="row">
                                                 <div class="col-lg-12 float-left">
-                                                    <label for="exampleInputPassword1 float-left">ภาพประกอบ
-                                                        </label>
-                                                    <input type="hidden" id="contentPIC" name="contentPIC">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 float-left">
-                                                    <input type="file" id="image_name" name="image_name" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form mt-2">
-                                            <div class="row">
-                                                <div class="col-lg-12 float-left">
-                                                    @if($content3->image_name!=null)
-                                                        <img style="max-width:100%;"  src="images/{{ $content3->image_name }}">
-                                                    @else
-                                                        <img style="max-width:100%;" src="/bigwood_images/images.jpg">
-                                                    @endif
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form mt-2">
-                                            <div class="row">
-                                                <div class="col-lg-12 float-left">
                                                     <button type="submit" class="btn btn-success">Save</button>
                                                 </div>
                                             </div>
@@ -305,31 +280,6 @@
                                                     <textarea maxlength="1000" class="form-control" name="textEN"
                                                         id="textEN" cols="30" rows="5" placeholder="English content" 
                                                         value={{$content4->textEN}} required>{{$content4->textEN}}</textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form mt-2">
-                                            <div class="row">
-                                                <div class="col-lg-12 float-left">
-                                                    <label for="exampleInputPassword1 float-left">ภาพประกอบ
-                                                        </label>
-                                                    <input type="hidden" id="contentPIC" name="contentPIC">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 float-left">
-                                                    <input type="file" id="image_name" name="image_name" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form mt-2">
-                                            <div class="row">
-                                                <div class="col-lg-12 float-left">
-                                                    @if($content4->image_name!=null)
-                                                        <img style="max-width:100%;"  src="images/{{ $content4->image_name }}">
-                                                    @else
-                                                        <img style="max-width:100%;" src="/bigwood_images/images.jpg">
-                                                    @endif
                                                 </div>
                                             </div>
                                         </div>

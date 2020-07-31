@@ -72,24 +72,6 @@ class CreateFootersTable extends Migration
                 "updated_at" => date('Y-m-d H:i:s')
             )
         );
-
-        DB::table('footers')->insert(
-            array(
-                'id' => '7',
-                'value' => 'บริการนำเข้า-ส่งออก สินค้าต่างประเทศ',
-                "created_at" =>  date('Y-m-d H:i:s'),
-                "updated_at" => date('Y-m-d H:i:s')
-            )
-        );
-
-        DB::table('footers')->insert(
-            array(
-                'id' => '8',
-                'value' => 'รับให้คำปรึกษา-นำเข้าและส่งออกสินค้าไม้ แพ็คกิ้ง ดำเนินการด้านเอกสารเรื่องการนำเข้าและส่งออกสินค้าต่างประเทศ',
-                "created_at" =>  date('Y-m-d H:i:s'),
-                "updated_at" => date('Y-m-d H:i:s')
-            )
-        );
     }
 
     /**
